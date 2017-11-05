@@ -76,5 +76,21 @@ namespace Tests
 			//Assert
 			Assert.AreEqual(expectedResult, result);
 		}
+
+		[TestCase(@"1,1,1
+1,1,1", 6)]
+		[TestCase(@"1,1,1,1,1,1
+1,1,1,1,1,1,1,1", 14)]
+		public void Add_NewLine_HandleNewLines(string strNumbers, int expectedResult)
+		{
+			//Arrange
+			var calc = new StringCalculator();
+
+			//Act
+			var result = calc.Add(strNumbers);
+
+			//Assert
+			Assert.AreEqual(expectedResult, result);
+		}
 	}
 }

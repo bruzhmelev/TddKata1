@@ -11,7 +11,8 @@ namespace TddKata1
 			    return 0;
 		    }
 
-		    var strNumberArr = numbers.Split(',');
+		    var replacedNumbers = numbers.Replace("\r\n", ",");
+			var strNumberArr = replacedNumbers.Split(',');
 
 		    int start = 0;
 		    foreach (var strNum in strNumberArr)
