@@ -10,11 +10,18 @@ namespace TddKata1
 		    {
 			    return 0;
 		    }
-		    else
+
+		    var strNumberArr = numbers.Split(',');
+
+		    int start = 0;
+		    foreach (var strNum in strNumberArr)
 		    {
-			    return int.Parse(numbers);
+			    start += int.Parse(strNum);
 		    }
-		    return 0;
+
+		    return start;
+
+			//return int.Parse(numbers);
 	    }
     }
 }

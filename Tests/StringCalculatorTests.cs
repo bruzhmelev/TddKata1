@@ -40,6 +40,22 @@ namespace Tests
 			Assert.AreEqual(int.Parse(oneNumber), result);
 		}
 
+		[TestCase("1,1", 2)]
+		[TestCase("0,0", 0)]
+		[TestCase("3,3", 6)]
+		[TestCase("999999999,999999999", 1999999998)]
+		[TestCase("999999999,-999999999", 0)]
+		[TestCase("-1,-1", -2)]
+		public void Add_TwoNumber_SumThisNumber(string strNumbers, int expectedResult)
+		{
+			//Arrange
+			var calc = new StringCalculator();
 
+			//Act
+			var result = calc.Add(strNumbers);
+
+			//Assert
+			Assert.AreEqual(expectedResult, result);
+		}
 	}
 }
