@@ -10,6 +10,10 @@ namespace TddKata1
 		    {
 			    return 0;
 		    }
+		    else
+		    {
+			    return int.Parse(numbers);
+		    }
 		    return 0;
 	    }
     }
