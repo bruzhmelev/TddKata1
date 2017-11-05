@@ -4,5 +4,13 @@ namespace TddKata1
 {
     public class StringCalculator
     {
+	    public int Add(string numbers)
+	    {
+		    if (numbers == String.Empty)
+		    {
+			    return 0;
+		    }
+		    return 0;
+	    }
     }
 }
