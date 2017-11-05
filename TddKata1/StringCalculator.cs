@@ -20,8 +20,6 @@ namespace TddKata1
 		    }
 
 		    return start;
-
-			//return int.Parse(numbers);
 	    }
     }
 }
